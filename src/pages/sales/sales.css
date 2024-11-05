@@ -1,0 +1,89 @@
+.sales-main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slip-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    width: 50%; /* Adjust based on your layout */
+  }
+  
+  .slip-container {
+    width: 200px; /* Fixed width for each slip */
+    margin: 0 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    border-radius: 50%;
+  }
+  
+  .scroll-button.left {
+    left: 10px;
+  }
+  
+  .scroll-button.right {
+    right: 10px;
+  }
+  
+  .scroll-button:hover {
+    background-color: #ccc;
+  }
+
+.slip-container:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Elevation effect */
+    transform: translateY(-5px); /* Slight lift */
+}
+
+.slip-content{
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+    padding: 5px;
+}
+.slip-table{
+    padding: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+tr {
+    transition: background-color 0.3s;
+    font-size: 9px;
+}
+
+/* Optional hover effect */
+tr:hover {
+    background-color: #f9f9f9;
+}

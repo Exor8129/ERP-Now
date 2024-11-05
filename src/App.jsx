@@ -10,10 +10,10 @@ import Operations from "./pages/operations/operations";
 function App() {
   const myRouter = createBrowserRouter([
     {
-      path: "/layout",
+      path: "/",
       element: <LayoutPage />, // Use 'element' instead of 'Component'
       children: [
-        { path: "", element: <Home /> }, 
+        { path: "/", element: <Home /> }, 
         { path: "sales", element: <Sales /> } ,
         { path: "purchase", element: <Purchase /> }, 
         { path: "finance", element: <Finance/> },

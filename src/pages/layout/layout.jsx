@@ -25,6 +25,7 @@ const LayoutPage = () => {
   };
 
   const submenus = {
+    dashboard: [],
     sales: [
       { label: 'Invoices', icon: FileText, },
       { label: 'New Invoice', icon: FilePlus2 },
@@ -33,7 +34,9 @@ const LayoutPage = () => {
     // Define other submenus for different sections
     purchase: [
       { label: 'Purchase Orders', icon: FileText },
-      { label: 'New Order', icon: FilePlus2 }
+      { label: 'New Order', icon: FilePlus2 },
+      { label: 'Inventory', icon: FilePlus2 }
+
     ],
     finance: [
       { label: 'Financial Reports', icon: FileText },
@@ -57,12 +60,12 @@ const LayoutPage = () => {
           </div>
         </div>
         <div className="divider">
-          <Divider variant="Middle" />
+          <Divider variant="Middle" sx={{ bgcolor: '#5aa5fe' }}/>
         </div>
         <div className="list-container">
           <div className="tabs">
             <div className="link-wrapper">
-              <Link to={""} className="tab-links">
+              <Link to={""}onClick={() => menuVisibilityHandler('dashboard')} className="tab-links">
                 <LayoutDashboard />
                 Dashboard
               </Link>
@@ -100,7 +103,7 @@ const LayoutPage = () => {
           </div>
         </div>
         <div className="divider">
-          <Divider variant="Middle" />
+          <Divider variant="Middle" sx={{ bgcolor: '#5aa5fe' }} />
         </div>
 
         <div className="side-footer">
