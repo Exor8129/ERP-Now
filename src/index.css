@@ -1,0 +1,15 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+:root {
+  --primary-color: #f8f9fa;
+  --secondary-color: #2ecc71;
+  --background-color: #ececf1;
+  --text-color: #2c3e50;
+  --bar-color:#5aa5fe;
+  --font-color:#495057;
+  --shadow-color:#1f1f1f;
+}

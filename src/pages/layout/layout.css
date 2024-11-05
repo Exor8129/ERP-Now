@@ -1,0 +1,124 @@
+.layout-main-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--background-color);
+
+
+}
+
+.sidenav-container{
+    width: 20%;
+    min-width: 350px;
+    background-color:var(--primary-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 4px 4px var(--shadow-color);
+    position: relative;
+}
+
+.profile{
+    font-family: "Outfit", sans-serif;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img{
+    width: 80px;
+    height: 80px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    width: 90px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.tab-links{
+    text-decoration: none;
+    padding: 15px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family:"Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--font-color);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.tab-links:hover{
+    color: var(--bar-color);
+}
+
+.side-footer{
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    left: 0; /* Aligns with the left edge */
+    right: 0; /* Aligns with the right edge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.divider{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.link-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* background-color: bisque; */
+}
+
+.sub-menu-sale {
+    max-height: 0; /* Start with max-height of 0 */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+    margin-left: 80px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    padding: 0; /* No padding when hidden */
+}
+
+.sub-menu-sale.active {
+    max-height: 200px; /* Adjust this value to fit your content */
+    padding: 5px; /* Add padding when active */
+}
+
+.sub-menu {
+    max-height: 0; /* Start with max-height of 0 */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+    margin-left: 80px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    padding: 0; /* No padding when hidden */
+}
+
+.sub-menu.active {
+    max-height: 200px; /* Adjust this value to fit your content */
+    padding: 5px; /* Add padding when active */
+}
+

@@ -1,0 +1,31 @@
+.submenu {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Ensure it takes the full height of the parent */
+    gap: 5px;
+}
+
+.submenu-item {
+    display: flex; /* Align icon and label horizontally */
+    align-items: center; /* Center items vertically within the submenu-item */
+    margin: 5px 0; /* Optional: space between items */
+    cursor: pointer;
+    gap: 10px;
+    
+}
+
+.sub-link{
+    text-decoration: none;
+} 
+
+.submenu-item span {
+    margin-left: 8px; /* Adjust this value for the gap between icon and label */
+}
+
+.submenu-item:hover {
+    color: var(--bar-color);
+}
+.sub-link:hover{
+    color: var(--bar-color);
+}
