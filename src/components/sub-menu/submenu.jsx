@@ -1,17 +1,18 @@
 import React from 'react';
-import "./submenu.css"
 import { Link } from 'react-router-dom';
-// import {FileText,FilePlus2} from 'lucide-react'
+import './submenu.css';
+// You can import icons from the lucide-react library as needed
+// import { FileText, FilePlus2, FileChartLine } from 'lucide-react';
 
-
-const Submenu = ({ items },pathName) => {
+const Submenu = ({ items, basePath }) => {
   return (
     <div className="submenu">
-      {items.map(({ label, icon: Icon, }, index) => (
+      {items.map(({ label, icon: Icon, path }, index) => (
         <div key={index} className="submenu-item">
           <Icon /> {/* Render the icon component */}
-          {/* <span>{label}</span> Render the label */}
-          <Link className='sub-link' to={pathName}>{label}</Link>
+          <Link className="sub-link" to={basePath + path}>
+            {label}
+          </Link>
         </div>
       ))}
     </div>

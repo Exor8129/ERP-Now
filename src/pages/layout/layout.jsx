@@ -28,7 +28,7 @@ const LayoutPage = () => {
     dashboard: [],
     sales: [
       { label: 'Invoices', icon: FileText, },
-      { label: 'New Invoice', icon: FilePlus2 },
+      { label: 'New Invoice', icon: FilePlus2,path: '/new-invoice'},
       { label: 'Sale Report', icon: FileChartLine }
     ],
     // Define other submenus for different sections
@@ -75,7 +75,7 @@ const LayoutPage = () => {
               Sales
             </Link>
             <div className={`sub-menu ${activeSubmenu === 'sales' ? 'active' : ''}`}>
-              <Submenu items={submenus.sales} />
+              <Submenu items={submenus.sales} basePath="" />
             </div>
             <Link onClick={() => menuVisibilityHandler('purchase')} className="tab-links">
               <PackagePlus />

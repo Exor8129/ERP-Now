@@ -1,0 +1,589 @@
+
+.invoice-main-container{
+    /* background-color:rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+.invoice-a4-container {
+    width: 794px; /* A4 width in pixels */
+    height: 1122px; /* A4 height in pixels */
+    border: solid 1px #898989;
+    margin-top: 20px ;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+.containerInvoice{
+    /* background-color: beige; */
+    width: 750px;
+    /* height: 200px; */
+    margin-bottom: 10px;
+    font-size: 13px;
+    display: flex;
+    color: black;
+    /* background-color: cadetblue; */
+    z-index: 210px; */
+    
+    
+  }
+  
+  .section1{
+    /* background-color: brown; */
+    width: 300px;
+    border-top: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    /* border-left: 1px solid #ddd; */
+  }
+  
+  .partyNamehead{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+  }
+  .partyName{
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+  .partyAddresshead{
+    
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    
+    padding-left: 10px;
+    border-left: 1px solid #ddd;
+    height: 151px;
+  }
+  .partyAddress{
+    padding-left: 20px;
+  }
+  .phone{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+  }
+  
+  .gst{
+    background-color: #f9f9f9;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+  }
+  .gstno{
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+  
+  .section2{
+    /* background-color: rgb(101, 155, 216); */
+    width: 240px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    height:max-content
+  }
+  
+  .ship{
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 10px;
+   height: 100px;
+  }
+  .shipadd{
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
+  .itemTableheader {
+    position: relative;
+  }
+  
+  .tableHead {
+    position: relative;
+    z-index: 1; /* Ensure the table is below the overlay */
+  }
+  
+  .tableHead table {
+    width: 750px;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #000;
+  }
+  
+  .tableHead th, .tableHead td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .tableHead th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  /* Align columns */
+  .tableHead th.item-col, 
+  .tableHead td.item-col {
+    width: 500px; /* Adjust width as needed */
+    text-align: left; /* Align item description to the left */
+  }
+  
+  .tableHead th.qty-column, 
+  .tableHead td.qty-column {
+    width: 30px; /* Adjust width as needed */
+    text-align: center; /* Center align quantity */
+  }
+  
+  .tableHead th.rate-column, 
+  .tableHead td.rate-column {
+    width: 40px; /* Adjust width as needed */
+    text-align: center; /* Center align rate */
+  }
+  
+  /* Other styles */
+  .sl {
+    width: 10px;
+  }
+  
+  .fit {
+    width: fit-content;
+  }
+  
+  .tableHead tbody td {
+    font-size: 12px;
+  }
+  
+  .tableHead tbody tr {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  
+  .tableHead tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect */
+  .item-table-body tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Overlay style to cover the viewport */
+  .popup-overlay {
+    position: fixed; /* Stays in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Style for the popup */
+  .popup-overlay .select-container {
+    background: white; /* Background color for the popup */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for popup */
+  }
+  
+  .expiry {
+    font-style: italic;
+    color: cadetblue;
+    font-size: 10px;
+  }
+  
+  .batch {
+    margin-left: 5px;
+    font-style: italic;
+    color: cadetblue;
+    font-size: 10px;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .input-field {
+    border: none;
+    fill: none;
+    background: transparent;
+    width: 35px;
+  }
+  
+  .input-field-Rate {
+    border: none;
+    fill: none;
+    background: transparent;
+    width: 40px;
+  }
+  
+  .input-field-disc {
+    border: none;
+    fill: none;
+    background: transparent;
+    width: 30px;
+  }
+  
+  .input-field-Rate::-webkit-inner-spin-button,
+  .input-field-Rate::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-field::-webkit-inner-spin-button,
+  .input-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-field-disc::-webkit-inner-spin-button,
+  .input-field-disc::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Position and style the delete icon */
+  .delete-icon {
+    position: fixed;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    background: #f44336; /* Red background for delete button */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Style for selected row */
+  .selected-row {
+    background-color: #f1f1f1;
+  }
+  
+  
+  
+  .state {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    /* width: 190px; */
+  }
+  
+  .stateCode {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding-left: 5px;
+    
+    /* padding-right: 35px; */
+    padding-top: 5px;
+    border-right: 1px solid #ddd;
+    width: 110px;
+  }
+  
+  .stateName {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    padding-left: 5px;
+    border-right: 1px solid #ddd;
+    padding-right: 35px;
+    padding-top: 5px;
+    width: 100px;
+    border-left: 1px solid #ddd;
+  }
+  
+  
+  .statename {
+    padding-left: 5px;
+    width: 90px;
+    /* font-size: 10px; Adjust this value as needed */
+    overflow: hidden; /* Hide text that overflows the container */
+    text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  }
+  
+  .code{
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+  
+  .dlno{
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    /* padding-bottom: 25px; */
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+  }
+  .dl{
+    padding-left: 10px;
+  }
+  
+  .section3{
+    /* background-color: rgb(55, 60, 83); */
+    width: 210px;
+    border-top: 1px solid #ddd;
+    
+    /* border-left: 1px solid #ddd; */
+    /* border-right: 1px solid #ddd; */
+  }
+  
+  .invcNum{
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .invoiceNumber{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding-left: 5px;
+    /* padding-right: 20px; */
+    width: 100px;
+    height: 50px;
+  }
+  
+  .invoiceDate{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    width: 110px;
+    height: 50px;
+  }
+  
+  .poNum{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+  }
+  
+  .poNumber{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    width: 100px;
+    padding-left: 5px;
+  }
+  
+  .poDate{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left: 5px;
+    /* padding-right: 20px; */
+    width: 110px;
+  }
+  
+  .txttoppad{
+    padding-top: 5px;
+  }
+  
+  .trans{
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: 51px;
+    /* padding-bottom: 10px; */
+  }
+  
+  .courier{
+    padding-left: 30px;
+    padding-top: 5px;
+    font-size: 13px;
+  }
+  
+  
+  
+  /* Popup styles */
+  .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears on top */
+  }
+  
+  .popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  }
+  
+  .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  }
+  
+  .close-button:hover {
+  background: #c00;
+  }
+
+  .table-container {
+    
+    margin-top: 5px;
+    /* width: 610px; */
+    color: black;
+   
+ 
+  }
+  
+  /* Table wrapper for horizontal scrolling */
+  .table-wrapper {
+    /* width: 850px; */
+    /* overflow-x: auto; */
+    display: flex;
+    /* flex-direction: row; */
+    height: 300px;
+  }
+  
+  /* Table styling */
+  .footer-table {
+    /* width: 100%; */
+    border-collapse: collapse;
+  }
+  .footer-table-2{
+    width: 275px;
+    border-collapse: collapse;
+    margin-left: 2px;
+    font-weight: bold;
+    /* margin-right: 10px; */
+  }
+  
+  /* Header row styling - Center text horizontally and vertically */
+  .footer-table-head th {
+    /* padding: 5px; Reduce the padding to decrease height */
+    border: 1px solid #ddd;
+    text-align: center; /* Horizontal alignment */
+    vertical-align: middle; /* Vertical alignment */
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  /* Body row and cell styling - Align text in the center vertically and horizontally */
+  .footer-table-body td {
+    /* padding: 5px; */
+    border: 1px solid #ddd;
+    text-align: center; /* Horizontal alignment */
+    vertical-align: middle; /* Vertical alignment */
+    font-size: 10px;
+  }
+  /* Alternate row coloring */
+  .footer-table-body tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    text-align: center; /* Horizontal alignment */
+    vertical-align: middle; /* Vertical alignment */
+    font-size: 10px;
+  }
+
+   /* Alternate row coloring */
+   .footer-table-body-2 tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  
+  
+  /* Hover effect
+  .footer-table-body tr:hover {
+    background-color: #f1f1f1;
+  } */
+
+  .footer-table-body .vhead {
+    text-align: left; /* Override default alignment */
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.decleration{
+  font-size: 10px;
+  font-weight: lighter;
+}
+.amntwords{
+  font-size: 13px;
+  font-weight: lighter;
+  padding-left: 20px;
+}
+
+.computerGen{
+  font-size: 13px;
+  text-align: center;
+  margin-left: 150px;
+  color:#ddd;
+}
+
+
+.tablebdy{
+  width: 125px;
+}
+
+.signature{
+  height: 120px;
+}
+
+.totals{
+  width: 110px;
+}
